@@ -385,7 +385,7 @@ void BilinearInterp16(register const cmsUInt16Number Input[],
 
 {
 #define DENS(i,j) (LutTable[(i)+(j)+OutChan])
-#define LERP(a,l,h)     (cmsUInt16Number) (l + ROUND_FIXED_TO_INT(((h-l)*a)))
+#define LERP(a,l,h)     (cmsUInt16Number) ((l) + ROUND_FIXED_TO_INT((((h)-(l))*(a))))
 
            const cmsUInt16Number* LutTable = (cmsUInt16Number*) p ->Table;
            int        OutChan, TotalOut;
@@ -516,7 +516,7 @@ void TrilinearInterp16(register const cmsUInt16Number Input[],
 
 {
 #define DENS(i,j,k) (LutTable[(i)+(j)+(k)+OutChan])
-#define LERP(a,l,h)     (cmsUInt16Number) (l + ROUND_FIXED_TO_INT(((h-l)*a)))
+#define LERP(a,l,h)     (cmsUInt16Number) ((l) + ROUND_FIXED_TO_INT((((h)-(l))*(a))))
 
            const cmsUInt16Number* LutTable = (cmsUInt16Number*) p ->Table;
            int        OutChan, TotalOut;

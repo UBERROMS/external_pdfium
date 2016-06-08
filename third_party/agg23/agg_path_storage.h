@@ -31,7 +31,7 @@ public:
     {
     public:
         vertex_source() {}
-        vertex_source(const path_storage& p) : m_path(&p), m_vertex_idx(0) {}
+        explicit vertex_source(const path_storage& p) : m_path(&p), m_vertex_idx(0) {}
         void rewind(unsigned path_id)
         {
             m_vertex_idx = path_id;

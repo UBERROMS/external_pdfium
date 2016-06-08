@@ -30,7 +30,7 @@ public:
         FX_Free(m_array);
     }
     pod_array() : m_size(0), m_capacity(0), m_array(0) {}
-    pod_array(unsigned cap, unsigned extra_tail = 0);
+    explicit pod_array(unsigned cap, unsigned extra_tail = 0);
     pod_array(const pod_array<T>&);
     const pod_array<T>& operator = (const pod_array<T>&);
     void capacity(unsigned cap, unsigned extra_tail = 0);
@@ -167,7 +167,7 @@ public:
     typedef T value_type;
     ~pod_deque();
     pod_deque();
-    pod_deque(unsigned block_ptr_inc);
+    explicit pod_deque(unsigned block_ptr_inc);
     pod_deque(const pod_deque<T, S>& v);
     const pod_deque<T, S>& operator = (const pod_deque<T, S>& v);
     void remove_all()
@@ -431,7 +431,7 @@ public:
     {
         remove_all();
     }
-    pod_allocator(unsigned block_size, unsigned block_ptr_inc = 256 - 8) :
+    explicit pod_allocator(unsigned block_size, unsigned block_ptr_inc = 256 - 8) :
         m_block_size(block_size),
         m_block_ptr_inc(block_ptr_inc),
         m_num_blocks(0),

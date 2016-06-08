@@ -50,7 +50,7 @@ class CheckedNumeric {
 
   // Copy constructor.
   template <typename Src>
-  CheckedNumeric(const CheckedNumeric<Src>& rhs)
+  CheckedNumeric(const CheckedNumeric<Src>& rhs)  // NOLINT, implicit
       : state_(rhs.ValueUnsafe(), rhs.validity()) {}
 
   template <typename Src>
@@ -60,7 +60,7 @@ class CheckedNumeric {
   // This is not an explicit constructor because we implicitly upgrade regular
   // numerics to CheckedNumerics to make them easier to use.
   template <typename Src>
-  CheckedNumeric(Src value)
+  CheckedNumeric(Src value)  // NOLINT, implicit
       : state_(value) {
     COMPILE_ASSERT(std::numeric_limits<Src>::is_specialized,
                    argument_must_be_numeric);

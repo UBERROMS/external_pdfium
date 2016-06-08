@@ -79,7 +79,7 @@ private:
         }
     }
 public:
-    pixel_formats_gray(rendering_buffer& rb) :
+    explicit pixel_formats_gray(rendering_buffer& rb) :
         m_rbuf(&rb)
     {}
     AGG_INLINE unsigned width()  const

@@ -37,7 +37,7 @@ public:
         unsigned len;
         int8u* ptr;
         span_data() {}
-        span_data(int) : x(0), len(0), ptr(0) {}
+        explicit span_data(int) : x(0), len(0), ptr(0) {}
         span_data(int x_, unsigned len_, int8u* ptr_) :
             x(x_), len(len_), ptr(ptr_) {}
     };

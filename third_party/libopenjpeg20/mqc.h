@@ -126,7 +126,7 @@ Set the current context used for coding/decoding
 @param mqc MQC handle
 @param ctxno Number that identifies the context
 */
-#define opj_mqc_setcurctx(mqc, ctxno)	(mqc)->curctx = &(mqc)->ctxs[(OPJ_UINT32)(ctxno)]
+#define opj_mqc_setcurctx(mqc, ctxno)	((mqc)->curctx = &(mqc)->ctxs[(OPJ_UINT32)(ctxno)])
 /**
 Encode a symbol using the MQ-coder
 @param mqc MQC handle

@@ -371,7 +371,7 @@ class CheckedNumericState<T, NUMERIC_INTEGER> {
 
   // Copy constructor.
   template <typename Src>
-  CheckedNumericState(const CheckedNumericState<Src>& rhs)
+  explicit CheckedNumericState(const CheckedNumericState<Src>& rhs)
       : value_(static_cast<T>(rhs.value())),
         validity_(GetRangeConstraint(
             rhs.validity() | DstRangeRelationToSrcRange<T>(rhs.value()))) {}
@@ -437,7 +437,7 @@ class CheckedNumericState<T, NUMERIC_FLOATING> {
 
   // Copy constructor.
   template <typename Src>
-  CheckedNumericState(const CheckedNumericState<Src>& rhs)
+  explicit CheckedNumericState(const CheckedNumericState<Src>& rhs)
       : value_(static_cast<T>(rhs.value())) {}
 
   RangeConstraint validity() const {

@@ -68,7 +68,7 @@ FSDK_SetUnSpObjProcessHandler(UNSUPPORT_INFO* unsp_info);
 // flags for page mode.
 
 // Unknown value
-#define PAGEMODE_UNKNOWN -1
+#define PAGEMODE_UNKNOWN (-1)
 
 // Neither document outline nor thumbnail images visible
 #define PAGEMODE_USENONE 0

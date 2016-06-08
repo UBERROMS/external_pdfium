@@ -16,7 +16,7 @@ class CPDF_FormObject;
 class CPDF_LinkExtract;
 class CPDF_TextPageFind;
 
-#define FPDFTEXT_CHAR_ERROR -1
+#define FPDFTEXT_CHAR_ERROR (-1)
 #define FPDFTEXT_CHAR_NORMAL 0
 #define FPDFTEXT_CHAR_GENERATED 1
 #define FPDFTEXT_CHAR_UNUNICODE 2

@@ -8,7 +8,7 @@
 #include "core/include/fxge/fx_ge.h"
 #include "text_int.h"
 
-#define EM_ADJUST(em, a) (em == 0 ? (a) : (a)*1000 / em)
+#define EM_ADJUST(em, a) ((em) == 0 ? (a) : (a)*1000 / (em))
 
 #ifdef PDF_ENABLE_XFA
 extern void _FPDFAPI_GetInternalFontData(int id1,

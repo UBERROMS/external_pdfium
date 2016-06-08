@@ -73,7 +73,7 @@ public:
     {
         init(x1, y1, x2, y2, x3, y3, x4, y4);
     }
-    curve4_div(const curve4_points& cp) :
+    explicit curve4_div(const curve4_points& cp) :
         m_count(0)
     {
         init(cp[0], cp[1], cp[2], cp[3], cp[4], cp[5], cp[6], cp[7]);
@@ -146,7 +146,7 @@ public:
     {
         init(x1, y1, x2, y2, x3, y3, x4, y4);
     }
-    curve4(const curve4_points& cp)
+    explicit curve4(const curve4_points& cp)
     {
         init(cp[0], cp[1], cp[2], cp[3], cp[4], cp[5], cp[6], cp[7]);
     }

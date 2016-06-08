@@ -54,13 +54,13 @@ typedef struct {
 
 } _cmsMD5;
 
-#define F1(x, y, z) (z ^ (x & (y ^ z)))
+#define F1(x, y, z) ((z) ^ ((x) & ((y) ^ (z))))
 #define F2(x, y, z) F1(z, x, y)
-#define F3(x, y, z) (x ^ y ^ z)
-#define F4(x, y, z) (y ^ (x | ~z))
+#define F3(x, y, z) ((x) ^ (y) ^ (z))
+#define F4(x, y, z) ((y) ^ ((x) | ~(z)))
 
 #define STEP(f, w, x, y, z, data, s) \
-    ( w += f(x, y, z) + data,  w = w<<s | w>>(32-s),  w += x )
+    ( (w) += f(x, y, z) + (data),  (w) = (w)<<(s) | (w)>>(32-(s)),  (w) += (x) )
 
 
 static

@@ -28,7 +28,7 @@ template<class VertexSource, class Markers = null_markers>
 struct conv_dash : public conv_adaptor_vcgen<VertexSource, vcgen_dash, Markers> {
     typedef Markers marker_type;
     typedef conv_adaptor_vcgen<VertexSource, vcgen_dash, Markers> base_type;
-    conv_dash(VertexSource& vs) :
+    explicit conv_dash(VertexSource& vs) :
         conv_adaptor_vcgen<VertexSource, vcgen_dash, Markers>(vs)
     {
     }

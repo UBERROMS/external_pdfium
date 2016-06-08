@@ -33,14 +33,14 @@
 #endif
 
 // Convert a #FX_ARGB to a #FX_COLORREF.
-#define FX_ARGBTOCOLORREF(argb)                                            \
-  ((((FX_DWORD)argb & 0x00FF0000) >> 16) | ((FX_DWORD)argb & 0x0000FF00) | \
-   (((FX_DWORD)argb & 0x000000FF) << 16))
+#define FX_ARGBTOCOLORREF(argb)                                                \
+  ((((FX_DWORD)(argb) & 0x00FF0000) >> 16) | ((FX_DWORD)(argb) & 0x0000FF00) | \
+   (((FX_DWORD)(argb) & 0x000000FF) << 16))
 
 // Convert a #FX_COLORREF to a #FX_ARGB.
 #define FX_COLORREFTOARGB(rgb)                                   \
-  ((FX_DWORD)0xFF000000 | (((FX_DWORD)rgb & 0x000000FF) << 16) | \
-   ((FX_DWORD)rgb & 0x0000FF00) | (((FX_DWORD)rgb & 0x00FF0000) >> 16))
+  ((FX_DWORD)0xFF000000 | (((FX_DWORD)(rgb) & 0x000000FF) << 16) | \
+   ((FX_DWORD)(rgb) & 0x0000FF00) | (((FX_DWORD)(rgb) & 0x00FF0000) >> 16))
 
 typedef unsigned int FX_UINT;
 class CRenderContext;

@@ -11,7 +11,7 @@
 #if _FX_OS_ == _FX_ANDROID_
 #include "fpf_skiafont.h"
 #include "fpf_skiafontmgr.h"
-#define FPF_EM_ADJUST(em, a) (em == 0 ? (a) : (a)*1000 / em)
+#define FPF_EM_ADJUST(em, a) ((em) == 0 ? (a) : (a) * 1000 / (em))
 CFPF_SkiaFont::CFPF_SkiaFont()
     : m_pFontMgr(NULL),
       m_pFontDes(NULL),

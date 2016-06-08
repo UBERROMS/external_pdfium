@@ -30,7 +30,7 @@ CFX_PSRenderer::~CFX_PSRenderer() {
     delete pFont;
   }
 }
-#define OUTPUT_PS(str) m_pOutput->OutputPS(str, sizeof str - 1)
+#define OUTPUT_PS(str) m_pOutput->OutputPS(str, sizeof(str) - 1)
 void CFX_PSRenderer::Init(IFX_PSOutput* pOutput,
                           int pslevel,
                           int width,

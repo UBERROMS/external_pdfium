@@ -43,7 +43,7 @@ struct gray8 {
     value_type v;
     value_type a;
     gray8() {}
-    gray8(unsigned v_, unsigned a_ = base_mask) :
+    explicit gray8(unsigned v_, unsigned a_ = base_mask) :
         v(int8u(v_)), a(int8u(a_)) {}
 };
 }

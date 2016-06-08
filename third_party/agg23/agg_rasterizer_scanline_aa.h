@@ -140,7 +140,7 @@ private:
 class scanline_hit_test 
 {
 public:
-    scanline_hit_test(int x) : m_x(x), m_hit(false) {}
+    explicit scanline_hit_test(int x) : m_x(x), m_hit(false) {}
     void reset_spans() {}
     void finalize(int) {}
     void add_cell(int x, int)

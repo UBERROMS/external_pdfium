@@ -137,7 +137,7 @@ static ISOTEMPERATURE isotempdata[] = {
     {600,   0.33724,  0.36051,  -116.45  }
 };
 
-#define NISO sizeof(isotempdata)/sizeof(ISOTEMPERATURE)
+#define NISO (sizeof(isotempdata)/sizeof(ISOTEMPERATURE))
 
 
 // Robertson's method

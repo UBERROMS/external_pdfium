@@ -49,8 +49,8 @@
 
 // BorlandC 5.5, VC2003 are broken on that
 #if defined(__BORLANDC__) || (_MSC_VER < 1400) // 1400 == VC++ 8.0
-#define sinf(x) (float)sin((float)x)
-#define sqrtf(x) (float)sqrt((float)x)
+#define sinf(x) (float)sin((float)(x))
+#define sqrtf(x) (float)sqrt((float)(x))
 #endif
 
 
@@ -71,7 +71,7 @@
 #define MAX_STAGE_CHANNELS  128
 
 // Unused parameter warning supression
-#define cmsUNUSED_PARAMETER(x) ((void)x)
+#define cmsUNUSED_PARAMETER(x) ((void)(x))
 
 // The specification for "inline" is section 6.7.4 of the C99 standard (ISO/IEC 9899:1999).
 // unfortunately VisualC++ does not conform that

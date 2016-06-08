@@ -29,7 +29,7 @@ struct conv_stroke :
         public conv_adaptor_vcgen<VertexSource, vcgen_stroke, Markers> {
     typedef Markers marker_type;
     typedef conv_adaptor_vcgen<VertexSource, vcgen_stroke, Markers> base_type;
-    conv_stroke(VertexSource& vs) :
+    explicit conv_stroke(VertexSource& vs) :
         conv_adaptor_vcgen<VertexSource, vcgen_stroke, Markers>(vs)
     {
     }

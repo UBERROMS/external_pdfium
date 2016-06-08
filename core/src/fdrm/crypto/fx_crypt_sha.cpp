@@ -15,7 +15,7 @@ typedef struct {
   int blkused;
   unsigned int lenhi, lenlo;
 } SHA_State;
-#define rol(x, y) (((x) << (y)) | (((unsigned int)x) >> (32 - y)))
+#define rol(x, y) (((x) << (y)) | (((unsigned int)(x)) >> (32 - (y))))
 static void SHA_Core_Init(unsigned int h[5]) {
   h[0] = 0x67452301;
   h[1] = 0xefcdab89;

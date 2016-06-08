@@ -11,7 +11,7 @@
 
 #include "fpdfview.h"
 
-#define PDF_LINEARIZATION_UNKNOWN -1
+#define PDF_LINEARIZATION_UNKNOWN (-1)
 #define PDF_NOT_LINEARIZED 0
 #define PDF_LINEARIZED 1
 
